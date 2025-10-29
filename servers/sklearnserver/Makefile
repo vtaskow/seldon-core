@@ -13,7 +13,7 @@ docker-build:
 	s2i build \
 		-E environment \
 		./sklearnserver \
-		${BASE_IMAGE} \
+		${DOCKER_REGISTRY}/seldon-core-s2i-python312:${VERSION} \
 		${IMAGE_NAME}:${VERSION}
 
 docker-push:
